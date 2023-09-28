@@ -29,11 +29,15 @@ AppState.prototype.loadItems = function () {
 
   let savedProducts = localStorage.getItem('Products');
 
+
   if (savedProducts){
     this.allProducts = JSON.parse(savedProducts);
-  }
+    console.log(savedProducts);
 
-  this.instantiateProducts();
+  } else{
+    this.instantiateProducts();
+
+  }
 
 }
 

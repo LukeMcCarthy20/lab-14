@@ -12,6 +12,7 @@ h1{
 img{
   width: 400px;
   height: 400px;
+  padding: 20px;
 }
 
 img:hover{
@@ -36,7 +37,7 @@ footer p{
 
 footer p:hover::before{
   color:red;
-  content: "Easter Egg";
+  content: "Easter Egg ";
 
  
 }
