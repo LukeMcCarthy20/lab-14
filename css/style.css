@@ -1,1 +1,48 @@
-/* TODO: Make it awesome */
+body{
+  background-color: grey;
+  color: aqua;
+}
+
+h1{
+  font-size: 55px;
+  background-color: black;
+}
+
+img{
+  width: 400px;
+  height: 400px;
+  padding: 10px;
+  
+}
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  width: 100%;
+}
+
+
+
+nav{
+  background-color: green;
+}
+
+ul li{
+  display: inline;
+  margin: 50px;
+  font-size: 25px;
+}
+
+
+a {
+  text-decoration: none;
+
+}
+
+section{
+  text-align: center;
+  margin-top: 20px;
+
+}
