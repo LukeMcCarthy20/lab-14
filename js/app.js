@@ -19,12 +19,19 @@ AppState.prototype.instantiateProducts = function () {
 }
 
 AppState.prototype.saveToLocalStorage = function () {
-  // TODO: Fill in this instance method to save product data to local storage
+  let arrayString = JSON.stringify(this.allProducts);
+  console.log(arrayString);
+
+  localStorage.setItem('Products', arrayString);
 }
 
 AppState.prototype.loadItems = function () {
 
-  // TODO: Update this instance method to retrieve data from local storage instead of creating new Products on each page load
+  let savedProducts = localStorage.getItem('Products');
+
+  if (savedProducts){
+    this.allProducts = JSON.parse(savedProducts);
+  }
 
   this.instantiateProducts();
 

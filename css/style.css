@@ -1,18 +1,21 @@
 body{
-  background-color: grey;
+  background-color: #1F2833;
   color: aqua;
 }
 
 h1{
-  font-size: 55px;
+  font-size: 45px;
   background-color: black;
+  border-bottom: 3px solid aqua;
 }
 
 img{
   width: 400px;
   height: 400px;
-  padding: 10px;
-  
+}
+
+img:hover{
+  border: 5px solid aqua;
 }
 
 
@@ -21,12 +24,29 @@ footer{
   bottom: 0;
   background-color: black;
   width: 100%;
+  height: 30px;
+}
+
+footer p{
+  margin-top: 10px;
+  margin-left: 5px;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+footer p:hover::before{
+  color:red;
+  content: "Easter Egg";
+
+ 
 }
 
 
 
+
 nav{
-  background-color: green;
+  background-color: black;
+  width: 100%;
 }
 
 ul li{
@@ -38,6 +58,7 @@ ul li{
 
 a {
   text-decoration: none;
+  color: aqua;
 
 }
 
