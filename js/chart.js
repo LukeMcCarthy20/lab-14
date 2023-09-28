@@ -10,7 +10,46 @@ let canvasElem = document.getElementById('chart')
  * - Call chart.js with the configuration and the canvasElem
  *
  */
+
+
+
+// Most of this is from Craig... 
+let newState = new AppState();
+newState.loadItems();
+console.log(newState);
+console.log(newState.allProducts);
+
+
 function renderChart() {
+  let dataObjectsName = [];
+  let dataObjectsData = [];
+  if (newState) {
+    console.log(newState.allProducts.length);
+    for (let i = 0; i < newState.allProducts.length; i++) {
+      console.log(newState.allProducts[i].name);
+      dataObjectsName.push(newState.allProducts[i].name);
+      dataObjectsData.push(newState.allProducts[i].timesClicked);
+    }
+  }
+  new Chart(canvasElem, {
+    type: 'bar',
+    data: {
+      labels: dataObjectsName,
+      datasets: [{
+        label: '# of Votes',
+        data: dataObjectsData,
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
 }
 
 renderChart();
